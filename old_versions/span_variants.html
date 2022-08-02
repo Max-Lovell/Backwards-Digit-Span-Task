@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digit/Letter Span</title>
+    </head>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway'>
+    <style>
+        body {font-family: 'Raleway', sans-serif;}
+        #main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #response_label{
+            font-size: 25px;
+        }
+        #response_instructions{
+            font-size: 20px;
+            font-style: italic;
+        }
+        #response_disp{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+            height: 40px;
+            font-size: inherit;
+        }
+
+        #confidence{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 250px;
+        }
+        #confidence_instructions{
+            font-size: 20px;
+            font-style: italic;
+        }
+        #confidence_value{
+            font-size: 20px;
+        }
+
+    </style>
+    <body>
+        <div id="main">
+            <p id="welcome">Welcome to the task! press spacebar to begin</p>
+            <p id="stim_disp"></p>
+            <p id="feedback_disp"></p>
+            <label for="response" id="response_label" hidden>List the <span id="stim_type">letters</span> in <span id="direction">the order they appeared</span>.</label>
+                <span id="response_instructions" hidden>Press the enter/return key to submit.</span><br>
+                <input type="text" name="response" id="response_disp" hidden>
+            <div id="SPA_stim" hidden></div>
+            <div id="2AFC_stim" hidden>
+                <div id="2AFC_left" hidden></div><div id="2AFC_right" hidden></div>
+            </div>
+            <label for="confidence" id="confidence_label" hidden>Rate your confidence in your response:</label>
+                <span id="confidence_instructions" hidden>Click and drag the slider or use the number keys and press enter.</span><br>
+                <input type="range" id="confidence" name="confidence" min="0" max="100" step="10" value="0" hidden>
+                <span id="confidence_value" hidden>0%</span>
+        </div>
+    </body>
+    <script src="span.js"></script>
+</html>

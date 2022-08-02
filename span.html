@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Backwards Digit Span Task</title>
+    </head>
+    <link rel='stylesheet' href='span.css'>
+    <body>
+        <div id="text_disp" class="centred">In this task, you will be shown a number, and then asked if another number is the same as that number, but displayed backwards.<br><br>
+            For example, if you saw the number 12345, and then 54321 on the next screen, you would answer 'yes' as the second number is the first one reversed.<br><br>
+            You will then be asked to judge your confidence in your response.<br><br>
+            The first 5 trials are practice trials, where you will recieve feedback on your responses.<br><br>
+            Please press Spacebar or click anywhere to begin.
+        </div>
+        <div id="stim_cont" class="centred" hidden>
+            <p id="stim_instr">Is the number just displayed backwards?</p>
+            <div id="stim_grid">
+                <div id="l_stim"></div>
+                <div id="m_stim"></div>
+                <div id="r_stim"></div>
+            </div>
+            <p id="input_instr"><small><i>Answer 'Yes' or 'No' by pressing <strong>Y</strong> or <strong>N</strong> on your keyboard, or click the buttons below</i></small></p>
+            <div id="buttons">
+                <div class="b_div"><input type="button" value="Yes" id="left" class="button"></div>
+                <div class="b_div"><input type="button" value="No" id="right" class="button"></div>
+            </div>
+        </div> 
+        <div id="conf" class="centred" hidden>
+            <label for="conf_sl" id="conf_l">Rate your confidence in your response:</label><br>
+            <span id="conf_instr">Click & drag the slider, or use the number keys (incl. either side of 1-9)<br>then press the 'enter' key, or click the button to submit.</span><br>
+            <input type="range" id="conf_sl" name="conf_sl" min="0" max="100" step="10" value="0"><br>
+            <span id="conf_val">0%</span><br><br>
+            <input type="button" id="conf_b" class="button" value="Submit">
+        </div>
+    </body>
+    <script src="span.js"></script>
+</html>
